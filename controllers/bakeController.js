@@ -72,5 +72,3 @@ module.exports = {
 //     console.log('Internal Server Error')
 //     res.send('Internal Server Error')
 // }
-//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdAZ21haWwiLCJpYXQiOjE2MTY1ODQ0MTV9.8J6VLtRuJLND0lxJ8xgBMwCkSDWWUganBUP_6an3kmI
-//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdAZ21haWwiLCJpYXQiOjE2MTY1ODQzMTJ9.KWeDtFP7YxoPW0LkAbc0m7ikaZ0cHZe6bdKQVEj2vp8

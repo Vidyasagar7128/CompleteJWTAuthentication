@@ -7,10 +7,11 @@ const {protect} = require('./middlewares/auth')
 const multer = require('multer')
 const upload = multer({dest: 'images/'})
 const fileController = require('./controllers/fileController')
+const { UserProtect } = require('./middlewares/userAuth')
 
 ///Create Bakery & get
 router.route('/bakery')
-    .get(bakeController.bakeIndex)
+    .get(protect.login,bakeController.bakeIndex)
     .post(bakeController.createBake)
 
 
@@ -20,16 +21,24 @@ router.route('/login')
 //Post & Get cakes by Bakery with Id
 router.route('/cake/:bakeId')
     .get(cakeController.getCake)
-    .post(cakeController.postCake)
+    .post(protect.login,cakeController.postCake)
 
 /// Normal Users can Show Cakes
 router.route('/cakes')
     .get(usersController.getCakes)
-    .post(usersController.createUser)
+    //.post(protect.login,usersController.createUser)
 
 /// Create Users
 router.route('/user')
     .post(usersController.createUser)
+
+
+  router.route('/userlogin')
+    .post(usersController.loginUser)
+
+
+  router.route('/finduser')
+    .get(UserProtect.userLoginforCake,usersController.logUser)
 
 
 router.route('/find')

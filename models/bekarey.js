@@ -71,3 +71,6 @@ module.exports = mongoose.model('bakery', BekareySchema)
 //     "mobile":"9874562587",
 //     "password":"Hanuman@123"
 // }
+
+
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNoYXVkaGFyeXN3ZWV0c0BnbWFpbC5jb20iLCJpYXQiOjE2MTY2MDQzMDR9.GJ30RvGkSNkCWm0Pq3DgfUAU0p8rxOoXa9nZmpDbkKc

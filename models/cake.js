@@ -12,3 +12,11 @@ CakeSchema = new Schema({
     // Schema.Types.ObjectId
 })
 module.exports = mongoose.model('cake', CakeSchema)
+
+
+// {
+//     "name":"cake 1",
+//     "type":"normal",
+//     "price":250,
+//     "deliveryType":"Charge"
+// }
