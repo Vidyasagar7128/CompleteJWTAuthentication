@@ -11,7 +11,7 @@ const { UserProtect } = require('./middlewares/userAuth')
 
 ///Create Bakery & get
 router.route('/bakery')
-    .get(protect.login,bakeController.bakeIndex)
+    .get(bakeController.bakeIndex)
     .post(bakeController.createBake)
 
 
@@ -23,10 +23,20 @@ router.route('/cake/:bakeId')
     .get(cakeController.getCake)
     .post(protect.login,cakeController.postCake)
 
+
+///Cake Delete Update Bakery
+router.route('/cake/:bakeId/:cakeId')
+      .get(bakeController.getCakefordelete)
+
+///Cake Delete
+router.route('/cakedelete')
+    .get(protect.login,cakeController.deleteCake)
+
+
 /// Normal Users can Show Cakes
 router.route('/cakes')
     .get(usersController.getCakes)
-    //.post(protect.login,usersController.createUser)
+    .post(protect.login,usersController.createUser)//Commented
 
 /// Create Users
 router.route('/user')
@@ -45,8 +55,9 @@ router.route('/find')
     .get(protect.login,bakeController.loginMe)
 
 
-// router.route('/image')
-//     .post(upload.single('file'),fileController.loginMe)
+router.route('/search/:text')
+    .get(bakeController.findBakery)
+
 
 router.post('/image',upload.single('file'),(req,es) =>{
     if (!req.file) {
@@ -68,3 +79,5 @@ router.post('/image',upload.single('file'),(req,es) =>{
 module.exports = router;
 
 //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4zQGdtYWlsLmNvbSIsImlhdCI6MTYxNjE2NzIyM30.68rE9vS7CDqLlpSMgLK1MrnLS0_O1L5EiMn-6XmK-gU
+
+//   605b6c69a88301446818e785/605b734a2d132008a45e8a3f

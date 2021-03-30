@@ -12,6 +12,7 @@ exports.protect = {
 
         if (!token) {
             console.log('empty');
+            //next()
         } else {
             try {
                 const decodes = jwt.verify(token, 'mynameisanthonyghonsalvismainduniyameakelahun')

@@ -33,6 +33,11 @@ module.exports = {
             res.send('Internal Server Error')
         }
     },
+
+///Delete Cake
+      deleteCake: async (req,res,next)=>{
+         const cake = await Cake.findByIdAndDelete({_id:req.params.cakeId})
+      }
 }
 // newCar = newCake
 //user = bake
