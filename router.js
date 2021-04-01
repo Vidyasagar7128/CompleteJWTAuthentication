@@ -25,8 +25,8 @@ router.route('/cake/:bakeId')
 
 
 ///Cake Delete Update Bakery
-router.route('/cake/:bakeId/:cakeId')
-      .get(bakeController.getCakefordelete)
+router.route('/cakes')
+      .get(protect.login,bakeController.getBakeryCakes)
 
 ///Cake Delete
 router.route('/cakedelete')

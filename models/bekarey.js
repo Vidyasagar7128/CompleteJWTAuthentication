@@ -74,3 +74,4 @@ module.exports = mongoose.model('bakery', BekareySchema)
 
 
 //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNoYXVkaGFyeXN3ZWV0c0BnbWFpbC5jb20iLCJpYXQiOjE2MTY2MDQzMDR9.GJ30RvGkSNkCWm0Pq3DgfUAU0p8rxOoXa9nZmpDbkKc
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1haGFzd2VldHNAZ21haWwuY29tIiwiaWF0IjoxNjE3MDcxNjY4fQ.gciYRif_kk5prbWjzMKKCEcKqbZv1Hazkm8ZkoUBcEs
